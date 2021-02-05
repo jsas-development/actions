@@ -12,7 +12,4 @@ jobs:
       - uses: actions/checkout@v2
       - name: Test
         run: |
-          mkdir -p /var/www/test
-          cd /var/wwww/test
-          touch file.txt
           ls -la
