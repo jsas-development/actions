@@ -23,6 +23,7 @@ jobs:
           git config --global user.email "atendimento@jsas.com.br"
           git config --global user.name "Jonatas Sas"
           gh --version
-          echo "${{GITHUB_EVENT_NAME}}"
-          echo "${{GITHUB_REF}}"
-          echo "${{GITHUB_HEAD_REF}}"
+          echo "${{github.event.action}}"
+          echo "${{env.GITHUB_EVENT_NAME}}"
+          echo "${{env.GITHUB_REF}}"
+          echo "${{env.GITHUB_HEAD_REF}}"
