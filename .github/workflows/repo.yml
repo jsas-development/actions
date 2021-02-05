@@ -6,12 +6,12 @@ on:
       - 'main'
 
 jobs:
-  digio-uat-deploy:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: SSH Key Installation
-      - run: |
+      - name: Test
+        run: |
           mkdir -p /var/www/test
           cd /var/wwww/test
           touch file.txt
