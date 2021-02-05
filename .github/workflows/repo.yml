@@ -24,3 +24,4 @@ jobs:
           git config --global user.name "Jonatas Sas"
           git fetch jsas --prune
           git push jsas main
+          gh --version
