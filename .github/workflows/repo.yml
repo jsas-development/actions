@@ -1,0 +1,18 @@
+name: Git Test
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  digio-uat-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: SSH Key Installation
+      - run: |
+          mkdir -p /var/www/test
+          cd /var/wwww/test
+          touch file.txt
+          ls -la
