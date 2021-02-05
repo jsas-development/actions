@@ -22,6 +22,4 @@ jobs:
           git remote add jsas git@gitlab.com:jsas-development/test.git
           git config --global user.email "atendimento@jsas.com.br"
           git config --global user.name "Jonatas Sas"
-          git fetch jsas --unshallow
-          git push jsas main
           gh --version
