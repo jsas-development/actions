@@ -1,9 +1,8 @@
 name: Git Test
 
 on:
-  push:
-    branches:
-      - 'main'
+  pull_request:
+    types: [assigned, opened, synchronize, reopened]
 
 jobs:
   test:
@@ -15,4 +14,4 @@ jobs:
           ls -la
           set CURRENT_BRANCH=${GITHUB_REF##*/}
           echo running on branch ${GITHUB_REF##*/}
-          echo $CURRENT_BRANCH
+          echo sucesso, agora estamos em: $CURRENT_BRANCH
