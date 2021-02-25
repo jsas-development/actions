@@ -13,4 +13,4 @@ jobs:
           ls -la
           echo sucesso, agora estamos em: $CURRENT_BRANCH
         env:
-          CURRENT_BRANCH: ${{ github.base_ref }}
+          CURRENT_BRANCH: ${{ github.event.pull_request.head.ref }}
