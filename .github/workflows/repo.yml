@@ -1,7 +1,8 @@
 name: Git Test
 
-on: 
-  workflow_dispatch:
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
 
 jobs:
   test:
@@ -11,6 +12,6 @@ jobs:
       - name: Test
         run: |
           ls -la
-          echo sucesso, agora estamos em: $CURRENT_BRANCH
+          git --version
         env:
-          CURRENT_BRANCH: ${{ github.base_ref }}
+          CURRENT_BRANCH: ${{ github.event.pull_request.head.ref }}
