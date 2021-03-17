@@ -1,7 +1,8 @@
 name: Git Test
 
-on: 
-  workflow_dispatch:
+on:
+  release:
+    types: [published]
 
 jobs:
   test:
@@ -13,4 +14,4 @@ jobs:
           ls -la
           echo sucesso, agora estamos em: $CURRENT_BRANCH
         env:
-          CURRENT_BRANCH: ${{ github.base_ref }}
+          CURRENT_BRANCH: ${{ steps.get_version.outputs.VERSION }}
