@@ -14,6 +14,6 @@ jobs:
       - name: Test
         run: |
           ls -la
-          echo sucesso, agora estamos em: $CURRENT_BRANCH
+          echo sucesso, agora estamos em: $GITHUB_ENV
         env:
           CURRENT_BRANCH: ${{ steps.get_version.outputs.VERSION }}
