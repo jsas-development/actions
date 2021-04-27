@@ -12,7 +12,7 @@ jobs:
       - name: Test
         run: |
           ls -la
-          echo sucesso, agora estamos em: $CURRENT_BRANCH ($ACTOR)
+          echo sucesso, agora estamos em: $CURRENT_BRANCH - $ACTOR
         env:
           CURRENT_BRANCH: ${{ steps.vars.outputs.tag }}
           ACTOR: ${{ github.actor }}
